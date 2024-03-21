@@ -115,12 +115,23 @@ body {
 .home-big {
     font-size: 82px;
     margin-bottom: 50px;
+    line-height: 96px;
 }
 
 .home-small {
     font-size: 23px;
     margin-bottom: 100px;
+    line-height: 38px;
 }
+
+.sp-br {
+    display: block;
+  }
+
+  
+
+
+  
 
 
 
@@ -152,6 +163,7 @@ body {
 .about-big {
     font-size: 44px;
     margin-bottom: 30px;
+    line-height: 61px;
 }
 
 .about-small {
@@ -189,6 +201,10 @@ body {
     border-top-right-radius: 40px;
 }
 
+.MENU-wrap li {
+    width: 30%;
+}
+
 .menu-title {
     margin-top: -20px;
     font-size: 38px;
@@ -223,14 +239,18 @@ body {
     margin-bottom: 26px;
 }
 
-/* .GALLERY-wrap li {
-    width: 20%;
-} */
-
 .GALLERY-wrap {
     display: flex;
-    max-width: 1920px;
 }
+
+.GALLERY-wrap li{
+    width: 20%;
+}
+
+.GALLERY-in img{
+    width: 100%;
+}
+
 
 /* EVENT */
 
@@ -254,7 +274,8 @@ body {
     margin: 0 auto;
     padding: 40px 150px; 
     background-color: #fff;
-
+    box-sizing: border-box;
+    border-width: 3px;
 }
 
 .event-text {
@@ -295,7 +316,7 @@ body {
 
 .footer-area {
     background-color: #fff;
-    padding: 40px 150px; 
+    padding: 40px 0px; 
     box-sizing: border-box;
     margin: 0 auto;
     position: relative;
@@ -314,7 +335,7 @@ body {
 
 .footer-info-all {
     display: flex;
-    margin: 0 auto;
+    margin-left: 60px;
 }
 
 .footer-info {
@@ -334,6 +355,241 @@ body {
 .pagetop {
     width: 125px;
     position: fixed;
-    bottom: 125px;
-    right: 125px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.hamburger,
+.sp-nav {
+    display: none;
+}
+
+@media screen and (max-width:1100px){
+    .pc-nav {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        height: 33px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+    .hamburger span{
+        background: #fff;
+        display: block;
+        width: 33px;
+        height: 3px;
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+    }
+    .hamburger span::before,
+    .hamburger span::after{
+        content: '';
+        background: #fff;
+        display: block;
+        width: 33px;
+        height: 3px;
+        position: absolute;
+        transition: 0.3s;
+
+    }
+
+    .hamburger span::before {
+        bottom: 10px;
+    }
+
+    .hamburger span::after {
+        top: 10px;
+    }
+
+    .open span {
+        background: transparent
+    }
+
+    .open span::before {
+        bottom: 0px;
+        transform: rotate(45deg);
+    }
+
+    .open span::after {
+        top: 0px;
+        transform: rotate(135deg);
+    }
+
+    .sp-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .sp-nav ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sp-nav ul li {
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+        "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+        padding: 15px 0;
+
+    }
+
+
+
+    @media screen and (max-width: 767px) { 
+
+        .home-en {
+            font-size: 17px;
+            margin-bottom: 35px;
+        }
+        
+        .home-big {
+            font-size: 38px;
+            margin-bottom: 21px;
+            line-height: 44px;
+        }
+        
+        .home-small {
+            font-size: 16px;
+            margin-bottom: 100px;
+            line-height: 30px;
+        }
+
+        .sp-be-pc {
+            display: block;
+        }
+        
+
+        /* .about */
+
+        .about-logo{
+            display: flex;
+            margin: 0 auto;
+        }
+        
+        .ABOUT-area {
+            display: block;
+        }
+
+        .about-big {
+            font-size: 36px;
+            line-height: 45px;
+        }
+
+        .about-small {
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+
+        /* .MENU */
+
+
+        .MENU-wrap {
+            margin: auto;
+            display: block;
+            width: 80%;
+        }
+
+        .MENU-wrap li {
+            width: 80%;
+            margin-bottom: 62px;
+        }
+
+        .MENU-wrap p {
+            width: 80%;
+        }
+
+        .MENU-area {
+            width: 80%;
+            margin-bottom: 90px;
+        }
+
+        .menu-text-area {
+            width: 80%;    
+        }
+
+        .menu-text {
+            font-size: 17px;
+            line-height: 27px;
+        }
+
+        .MENU-wrap img {
+            width: 100%;
+        }
+
+
+
+        /* .GALLERY */
+
+        
+        .GALLERY-wrap {
+            margin: auto;
+            display: block;
+            max-width: 100%;
+        }
+
+        .GALLERY-wrap li{
+            width: 100%;
+        }
+        
+
+        /* .event */
+
+
+        .event-box {
+            max-width: 89.5%;
+            padding: 11% 9.5%; 
+            border-width: 3px;
+        }
+
+
+        .event-text-in {
+            display: block;
+        }
+
+        .event-text {
+            /* max-width: 1000px; */
+            /* position: relative; */
+            /* padding: auto; */
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+
+        /* .footer */
+
+
+        .footer-text img {
+            margin-left:10%;
+            display: block;
+            width: 58.8%;
+            text-align: left;
+        }
+
+        .footer-text {
+            display: block;
+        }
+        
+        .footer-info-all {
+            margin-left: 10%;
+        }
+
+        /*　画面サイズ 767px以下になったらここに書いてあるcssが適用される　*/
+      }
+    
+
+    
 }
